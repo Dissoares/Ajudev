@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Ajudev"
+    }
+  },
+  "defaultProject": "Ajudev",
+  "cli": {
+    "analytics": "e0da7612-0789-424a-a1de-ee45c801160c"
+  }
 }
