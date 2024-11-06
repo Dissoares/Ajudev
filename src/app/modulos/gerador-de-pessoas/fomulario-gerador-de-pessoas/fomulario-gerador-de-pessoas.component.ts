@@ -6,27 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fomulario-gerador-de-pessoas.component.scss'],
 })
 export class FomularioGeradorDePessoasComponent implements OnInit {
-  public pessoa: any = {};
-  public exibirEnderecoDialog = false;
-  public exibirDadosPessoaisDialog = false;
-  public exibirDadosProfissionaisDialog = false;
+  
+  public exibirDadosPessoaisDialog: boolean = false;
 
-  constructor() {}
+  constructor(
 
-  ngOnInit() {}
+  ) { }
 
-  public salvarEndereco(endereco: any) {
-    this.pessoa.endereco = endereco;
-    this.exibirEnderecoDialog = false;
+  ngOnInit() {
+    
   }
 
-  public salvarDadosPessoais(dadosPessoais: any) {
-    this.pessoa.dadosPessoais = dadosPessoais;
-    this.exibirDadosPessoaisDialog = false;
-  }
-
-  public salvarDadosProfissionais(dadosProfissionais: any) {
-    this.pessoa.dadosProfissionais = dadosProfissionais;
-    this.exibirDadosProfissionaisDialog = false;
+  public abrirModal() {
+    this.exibirDadosPessoaisDialog = true;
   }
 }

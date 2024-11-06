@@ -1,4 +1,10 @@
-<p-dialog header="Title" [(visible)]="display">
-  Content
+<p-dialog
+  header="Dados Pessoais"
+  [(visible)]="ativarModal"
+  [modal]="true"
+  [responsive]="true"
+  [closable]="true"
+>
+  <h1 class="modal">Dados Pessoais</h1>
+  <button pButton label="Fechar Modal" (click)="fecharModal()"></button>
 </p-dialog>
-

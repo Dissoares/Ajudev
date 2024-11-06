@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-dados-profissionais-dialog',
@@ -8,8 +8,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class DadosProfissionaisDialogComponent implements OnInit {
   @Output() dadosProfissionaisSalvos = new EventEmitter<any>();
-  public dadosProfissionaisForm: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  public dadosProfissionaisForm: UntypedFormGroup;
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnInit() {}
 

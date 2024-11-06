@@ -7,21 +7,23 @@ import { DadosProfissionaisDialogComponent } from '../dialogs/pessoa-dados-profi
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    ButtonModule,
-    DialogModule,
-    
-  ],
   declarations: [
     FomularioGeradorDePessoasComponent,
     DadosPessoaisDialogComponent,
     DadosEnderecoDialogComponent,
     DadosProfissionaisDialogComponent
-  ]
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    DialogModule,
+    BrowserAnimationsModule
+    
+  ],
 })
 export class FomularioGeradorDePessoasModule { }

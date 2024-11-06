@@ -1,5 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { UntypedFormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-dados-pessoais-dialog',
@@ -7,24 +7,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./dados-pessoais-dialog.component.scss'],
 })
 export class DadosPessoaisDialogComponent implements OnInit {
-  @Output() dadosPessoaisSalvos = new EventEmitter<any>();
-  public dadosPessoaisForm: FormGroup;
-  public display: any
+  
+  @Input() public ativarModal: boolean = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit() {}
 
-  public criarFormularioDadosPessoais() {
-    this.dadosPessoaisForm = this.fb.group({
-      nome: [''],
-      idade: [''],
-      dataNacimento: [''],
-      genero: [''],
-    });
-  }
-
-  salvarDadosPessoais() {
-    this.dadosPessoaisSalvos.emit(this.dadosPessoaisForm.value);
+  public fecharModal() {
+    this.ativarModal = false;
   }
 }
