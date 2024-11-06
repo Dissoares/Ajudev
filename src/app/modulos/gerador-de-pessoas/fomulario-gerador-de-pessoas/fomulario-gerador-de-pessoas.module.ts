@@ -4,10 +4,18 @@ import { FomularioGeradorDePessoasComponent } from './fomulario-gerador-de-pesso
 import { DadosPessoaisDialogComponent } from '../dialogs/pessoa-dados-pessoais/dados-pessoais-dialog/dados-pessoais-dialog.component';
 import { DadosEnderecoDialogComponent } from '../dialogs/pessoa-endereco/dados-endereco-dialog/dados-endereco-dialog.component';
 import { DadosProfissionaisDialogComponent } from '../dialogs/pessoa-dados-profissionais/dados-profissionais-dialog/dados-profissionais-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import {DialogModule} from 'primeng/dialog';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    DialogModule,
+    
   ],
   declarations: [
     FomularioGeradorDePessoasComponent,

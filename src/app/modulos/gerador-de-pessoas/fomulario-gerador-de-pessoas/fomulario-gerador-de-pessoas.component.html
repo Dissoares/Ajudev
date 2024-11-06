@@ -1,3 +1,12 @@
-<p>
-  FomularioGeradorDePessoas works!
-</p>
+<button class="p-button-success" pButton label="Adicionar Endereço" (click)="exibirEnderecoDialog = true"></button>
+<button class="p-button-success" pButton label="Adicionar Dados Pessoais" (click)="exibirDadosPessoaisDialog = true"></button>
+<button class="p-button-success" pButton label="Adicionar Dados Profissionais" (click)="exibirDadosProfissionaisDialog = true"></button>
+
+<app-dados-endereco-dialog *ngIf="exibirEnderecoDialog" (enderecoSalvo)="salvarEndereco($event)"></app-dados-endereco-dialog>
+<app-dados-pessoais-dialog *ngIf="exibirDadosPessoaisDialog" (dadosPessoaisSalvos)="salvarDadosPessoais($event)"></app-dados-pessoais-dialog>
+<app-dados-profissionais-dialog *ngIf="exibirDadosProfissionaisDialog" (dadosProfissionaisSalvos)="salvarDadosProfissionais($event)"></app-dados-profissionais-dialog>
+
+<div *ngIf="pessoa.endereco && pessoa.dadosPessoais && pessoa.dadosProfissionais">
+  <h3>Formulário Completo de Pessoa:</h3>
+  <pre>{{ pessoa | json }}</pre>
+</div>
