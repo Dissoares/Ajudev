@@ -1,5 +1,5 @@
 <button pButton label="Abrir Modal" (click)="abrirModal()"></button>
 
 <app-dados-pessoais-dialog
-  [ativarModal]="exibirDadosPessoaisDialog"
+  [ativarModal]="exibirDadosPessoaisDialog" (fecharModal)="fecharModal()"
 ></app-dados-pessoais-dialog>

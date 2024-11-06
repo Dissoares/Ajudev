@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { UntypedFormBuilder } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dados-pessoais-dialog',
@@ -9,12 +8,14 @@ import { UntypedFormBuilder } from '@angular/forms';
 export class DadosPessoaisDialogComponent implements OnInit {
   
   @Input() public ativarModal: boolean = false;
+  @Output() public fecharModal = new EventEmitter<boolean>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  public fecharModal() {
+  public fechar() {
     this.ativarModal = false;
+    this.fecharModal.emit(true);
   }
 }
