@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dados-endereco-dialog',
@@ -8,10 +8,10 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 })
 export class DadosEnderecoDialogComponent implements OnInit {
   @Output() enderecoSalvo = new EventEmitter<any>();
-  public enderecoForm: UntypedFormGroup;
+  public enderecoForm: FormGroup;
 
   constructor(
-    private fb: UntypedFormBuilder
+    private fb: FormBuilder
   ) {}
 
   ngOnInit() {
