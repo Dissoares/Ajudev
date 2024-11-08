@@ -1,10 +1,31 @@
-<p-dialog
-  header="Dados Pessoais"
-  [(visible)]="ativarModal"
-  [modal]="true"
-  [responsive]="true"
-  [closable]="true"
->
-  <h1 class="modal">Dados Pessoais</h1>
-  <button pButton label="Fechar Modal" (click)="fechar()"></button>
+<p-dialog class="tamanho-dialog" header="Formulário Dados Pessoais" [(visible)]="ativarModal" [modal]="true"
+  [responsive]="true" [closable]="true" (onHide)="fechar()">
+  <p-card>
+    <form [formGroup]="this.formularioDadosPessoais" (ngSubmit)="enviarFormulario()">
+
+      <div class="campo-principal">
+        <span class="p-float-label">
+          <input pInputText type="text" formControlName="nome" id="nome" class="campo-de-dados" />
+          <label for="nome" class="campo-titulo">Nome
+            <span *ngIf="formularioDadosPessoais.get('nome').invalid && formularioDadosPessoais.get('nome').touched"
+              class="campo-obrigatorio">*Obrigatório</span>
+          </label>
+        </span>
+      </div>
+
+      <div class="campo-principal">
+        <span class="p-float-label">
+          <p-calendar formControlName="dataNascimento" class="campo-de-dados" [showIcon]="true"></p-calendar>
+          <label for="dataNascimento" class="campo-titulo">Data de Nascimento
+            <span
+              *ngIf="formularioDadosPessoais.get('dataNascimento').invalid && formularioDadosPessoais.get('dataNascimento').touched"
+              class="campo-obrigatorio">*Obrigatório</span>
+          </label>
+        </span>
+      </div>
+
+      <button pButton type="submit" label="Salvar" [disabled]="formularioDadosPessoais.invalid"></button>
+      
+    </form>
+  </p-card>
 </p-dialog>

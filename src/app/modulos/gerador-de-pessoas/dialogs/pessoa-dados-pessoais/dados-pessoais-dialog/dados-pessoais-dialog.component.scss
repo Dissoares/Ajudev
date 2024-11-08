@@ -1,5 +1,28 @@
-.modal {
-    width: 500px;
-    height: 250px;
-    background-color: #df7d7d;
+::ng-deep .tamanho-dialog .p-card {
+    width: 800px !important;
+    height: 600px !important;
+}
+
+.campo-de-dados {
+    width: 100%;
+}
+
+.campo-obrigatorio {
+    color: red;
+    font-size: 12px;
+}
+
+.span {
+    color: red;
+}
+
+.campo-titulo {
+    font-size: 16px;
+    color: #043504;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.campo-principal {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

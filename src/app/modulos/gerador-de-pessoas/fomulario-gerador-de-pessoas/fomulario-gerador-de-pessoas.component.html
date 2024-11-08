@@ -1,4 +1,13 @@
-<button pButton type="button" class="p-button-success" label="Abrir Modal" (click)="abrirModal()"></button>
-<app-dados-pessoais-dialog
-  [ativarModal]="exibirDadosPessoaisDialog" (fecharModal)="fecharModal()"
-></app-dados-pessoais-dialog>
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <button pButton type="button" class="p-button-success" label="Cadastrar dados pessoais"
+      (click)="abrirModal()"></button>
+  </div>
+
+  <div class="p-toolbar-group-right">
+
+  </div>
+</p-toolbar>
+
+<app-dados-pessoais-dialog [ativarModal]="exibirDadosPessoaisDialog"
+  (fecharModal)="fecharModal()"></app-dados-pessoais-dialog>

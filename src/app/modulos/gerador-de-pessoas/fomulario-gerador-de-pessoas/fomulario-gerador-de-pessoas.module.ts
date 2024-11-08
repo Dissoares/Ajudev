@@ -6,24 +6,30 @@ import { DadosEnderecoDialogComponent } from '../dialogs/pessoa-endereco/dados-e
 import { DadosProfissionaisDialogComponent } from '../dialogs/pessoa-dados-profissionais/dados-profissionais-dialog/dados-profissionais-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import {DialogModule} from 'primeng/dialog';
+import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ToolbarModule } from 'primeng/toolbar';
+import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
     FomularioGeradorDePessoasComponent,
     DadosPessoaisDialogComponent,
     DadosEnderecoDialogComponent,
-    DadosProfissionaisDialogComponent
+    DadosProfissionaisDialogComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     ButtonModule,
     DialogModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    ToolbarModule,
+    InputTextModule,
+    CardModule,
+    CalendarModule,
   ],
 })
-export class FomularioGeradorDePessoasModule { }
+export class FomularioGeradorDePessoasModule {}
